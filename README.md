@@ -1,4 +1,4 @@
-##freeze — boutique hair studio
+## freeze — boutique hair studio
 
 
 A minimalist, responsive web experience designed for freeze, a luxury hair salon specializing in modern hair transformations. Built with an editorial focus on typography and fluid space.
