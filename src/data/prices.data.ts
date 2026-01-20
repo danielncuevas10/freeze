@@ -1,5 +1,3 @@
-import { type PriceItem } from "../components/Services/PriceRow";
-
 
 export const serviceCategories = [
   {
