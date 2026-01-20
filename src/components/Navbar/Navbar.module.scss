@@ -1,0 +1,183 @@
+$tablet: 768px;      
+$tablet-pro: 1028px; 
+$desktop: 1200px;
+$large-desktop:	1440px;
+$primary-color: #8e7a62;
+$nav-color: #F9F7F5;
+@use "sass:color";
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: $nav-color;
+  z-index: 9999;
+  padding: 1.5rem 3rem;
+
+}
+
+.inner {
+  max-width: 1550px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.logo {
+    font-family: 'Cormorant Garamond', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 400;
+    letter-spacing: 4px;
+    text-transform: lowercase;
+    color: $primary-color;
+    cursor: pointer;
+    flex-shrink: 0;
+    
+  &:hover {
+    opacity: 0.7; 
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 3rem;
+  }
+}
+
+.toggle {
+  margin-left: auto;  
+  margin-right: 4.5rem;
+  width: 25px;
+  height: 18px;
+  background: none;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+  z-index: 10000; 
+
+
+  span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: $primary-color;
+    border-radius: 2px;
+    transition: transform 0.4s ease, opacity 0.3s ease;
+  }
+
+  &.open {
+    span:nth-child(1) {
+      transform: translateY(5px) rotate(45deg);
+
+    }
+
+    span:nth-child(2) {
+      opacity: 0;
+    }
+
+    span:nth-child(3) {
+      transform: translateY(-10px) rotate(-45deg);
+    }
+  }
+
+  @media (min-width: $desktop) {
+    display: none;
+  }
+}
+
+
+.nav {
+  position: fixed;
+  inset: 0;
+  background: $nav-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  transform: translateX(100%);
+  transition: transform 0.35s ease;
+  z-index: 9999;
+
+  .btn {
+    background-color: $primary-color;
+    padding: 0.1rem 2rem;
+    border-radius: 2px;
+    
+    a {
+        color: #FFF;
+        font-weight: 400;
+        font-size: 0.75rem;
+        letter-spacing: 2px;
+
+        @media (min-width: $desktop) {
+            font-size: 1rem;
+        
+          }
+
+          
+    }
+
+    &:hover {
+        background-color: transparent;
+        a { color: $primary-color !important; }
+      }
+  }
+
+  a {
+    font-size: 1rem;
+    color: $primary-color;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+    font-weight: 400;
+    line-height: 2rem;
+
+    @media (min-width: $tablet) {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    font-weight: 300;
+    line-height: 4rem;
+    }
+    
+  }
+
+  &.show {
+    transform: translateX(0);
+  }
+
+  @media (min-width: $desktop) {
+    position: static;
+    transform: none;
+    flex-direction: row;
+    background: transparent;
+    gap: 3.5rem;
+    margin-left: auto;
+    width: auto;
+    justify-content: flex-end;
+
+    
+
+    a {
+        font-family: 'Montserrat', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 3px; 
+        font-size: .75rem;
+        font-weight: 500;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: color.adjust(#d3bfa7, $lightness: -50%);
+          }
+    }
+  }
+}

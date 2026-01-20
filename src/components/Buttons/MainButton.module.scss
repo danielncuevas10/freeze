@@ -1,0 +1,67 @@
+$mainButton: #B89E7E;
+$secondButton: #ddd7db;
+$tablet: 768px;      
+$tablet-pro: 1024px; 
+$desktop: 1200px;
+$large-desktop:	1440px;
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.mainButton {
+    padding: 1rem 2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    padding: .8rem 2rem;
+    margin: 1rem 0rem;
+    min-width: 180px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: 300;
+
+    @media (min-width: $tablet) {
+        font-size: 1.5rem;
+        padding: 1rem 2.5rem;
+    }
+}
+
+.primary {
+    background-color: $mainButton;
+    color: rgb(255, 255, 255);
+    border: 1px solid $mainButton;
+
+
+    
+      color: #fff;
+      font-weight: 300;
+      cursor: pointer;
+
+    &:hover {
+        filter: brightness(1.08);
+        transform: translateY(-5px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+}
+
+.secondary {
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid #B89E7E;
+    position: relative;
+
+
+    color: #fff;
+    font-weight: 200;
+    cursor: pointer;
+  
+    transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    filter 0.15s ease;
+
+    &:hover {
+        filter: brightness(1.08);
+        transform: translateY(-1px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+}

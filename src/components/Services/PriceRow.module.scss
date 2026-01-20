@@ -1,0 +1,88 @@
+$tablet: 768px;      
+$tablet-pro: 1024px; 
+$desktop: 1200px;
+$large-desktop:	1440px;
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.serviceRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    align-items: baseline;
+    border-bottom: 1px solid rgba(184, 158, 126, 0.1);
+
+    
+  
+    &:last-child {
+      border-bottom: none; 
+    }
+  }
+  
+  .info {
+    display: flex;
+    flex-direction: column; 
+    gap: 4px;
+  
+    h4 {
+
+      &::after {
+        content: "";
+        flex: 1;
+        border-bottom: 1px dotted #B89E7E;
+        margin: 0 15px;
+        opacity: 0.3;
+        order: 2; 
+      }
+
+
+      margin: 0;
+      font-size: 1.1rem;
+      color: #2D2926;
+      font-weight: 500;
+      font-family: 'Montserrat', sans-serif;
+
+      @media (min-width: $tablet) {
+        font-size: 1.3rem;
+    }
+      @media (min-width: $desktop) {
+        font-size: 1.2rem;
+    }
+    
+    }
+  
+    p {
+      margin: 0;
+      padding: .5rem;
+      font-size: 0.85rem;
+      color: #999; 
+      font-weight: 300;
+      font-family: 'Montserrat', sans-serif;
+      text-align: left;
+
+      @media (min-width: $tablet) {
+        font-size: 1rem;
+    }
+    }
+    
+  }
+  
+  .priceTag {
+    span {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #B89E7E; 
+      font-family: 'Montserrat', sans-serif;
+      
+
+      @media (min-width: $tablet) {
+        font-size: 1.5em;
+    }
+    @media (min-width: $desktop) {
+      padding: .5rem 0rem;
+      font-weight: 300;
+    }
+    }
+  }
