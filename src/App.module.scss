@@ -258,7 +258,9 @@ p {
         overflow: hidden;
 
         @media (min-width: $desktop) {
-        padding: 5rem 0;
+        padding: 0rem;
+        width: 100%;
+        margin: 1rem;
         }
       }
       
@@ -272,6 +274,7 @@ p {
 
         scroll-marker-group: after; 
         anchor-name: --price-carousel; 
+
 
     &::scroll-marker-group {
         display: flex;
@@ -294,13 +297,12 @@ p {
         }
 
         @media (min-width: $desktop) {
-            gap: 15px;
-            overflow-x: visible;     
-            justify-content: center; 
-            flex-wrap: wrap;  
+            gap: 1px;
+            overflow-x:auto;     
+            justify-content: center;  
             scroll-snap-type: none;
-            padding: 10px;
-            align-items: stretch;
+            padding: 1px;
+            align-items:center;
           }
           
       }
@@ -322,6 +324,10 @@ p {
             &:target-current {
                 background-color: $text-color;
             }
+
+            @media (min-width: $desktop) {
+                display: none;
+              }
         }
 
         @media (min-width: $tablet-pro) {
