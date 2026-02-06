@@ -23,3 +23,6 @@ Responsive Nav: Custom mobile menu and wide-format desktop navigation.
 Premium UI: Hover-responsive cards with deep-shadow depth and gold accents.
 
 Direct Booking: Integrated anchor scrolling and tel: links for seamless UX.
+
+
+Experience the live site at: https://freeze-bh.vercel.app/
